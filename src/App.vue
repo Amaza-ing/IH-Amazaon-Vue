@@ -1,12 +1,22 @@
 <script setup>
+import ConditionalRendering from './components/ConditionalRendering.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
+import ListRendering from './components/ListRendering.vue';
+import ProductList from './components/ProductList.vue';
 import VariablesComponent from './components/VariablesComponent.vue';
 </script>
 
 <template>
-  <h1>Bienvenidos a Vue!</h1>
+  <HeaderComponent />
 
   <VariablesComponent />
+  <ConditionalRendering />
+  <ListRendering />
+  <ProductList />
 </template>
 
-<style scoped>
+<style>
+body {
+  margin: 0;
+}
 </style>
