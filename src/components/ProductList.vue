@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import ProductCard from "./ProductCard.vue";
 
 const products = ref([
   {
@@ -36,16 +37,7 @@ const products = ref([
 <template>
   <ul class="product-list">
     <li v-for="product in products" :key="product.id">
-      <article class="product-card">
-        <h3 class="product-name">{{ product.name }}</h3>
-        <img
-          :src="product.img"
-          alt="Imagen del producto"
-          width="120"
-          height="120"
-        />
-        <h4>{{ product.price }}€</h4>
-      </article>
+      <ProductCard :product="product" />
     </li>
   </ul>
 </template>
@@ -57,18 +49,5 @@ const products = ref([
   padding: 0;
   display: flex;
   gap: 20px;
-
-  .product-card {
-    width: 150px;
-    height: 250px;
-    background-color: lightgreen;
-    padding: 10px;
-    margin: 10px;
-    border: 5px dashed green;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
 </style>
