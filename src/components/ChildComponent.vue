@@ -2,6 +2,16 @@
 const props = defineProps({
   title: String,
 })
+
+const emit = defineEmits([
+  "sendMsg",
+])
+
+const message = "Hola desde el hijo";
+
+function notify() {
+  emit("sendMsg", message)
+}
 </script>
 
 <template>
@@ -11,6 +21,8 @@ const props = defineProps({
     <h3>Este es el componente hijo</h3>
 
     <slot></slot>
+
+    <button @click="notify">Emitir mensaje</button>
 
     <h4>{{ props.title }}</h4>
 

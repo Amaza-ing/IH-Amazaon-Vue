@@ -2,6 +2,10 @@
 import ChildComponent from './ChildComponent.vue';
 
 const title2 = "Título del hijo 2";
+
+function displayMsg(msg) {
+  alert(msg);
+}
 </script>
 
 <template>
@@ -21,7 +25,7 @@ const title2 = "Título del hijo 2";
       </template>
     </ChildComponent>
 
-    <ChildComponent :title="title2" />
+    <ChildComponent :title="title2" @send-msg="displayMsg" />
   </section>
 </template>
 

@@ -2,6 +2,14 @@
 const props = defineProps({
   product: Object,
 })
+
+const emit = defineEmits([
+  "delete",
+])
+
+function deleteProduct() {
+  emit("delete", props.product.id);
+}
 </script>
 
 <template>
@@ -14,6 +22,7 @@ const props = defineProps({
       height="120"
     />
     <h4>{{ props.product.price }}€</h4>
+    <button @click="deleteProduct">Eliminar</button>
   </article>
 </template>
 

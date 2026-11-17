@@ -32,12 +32,16 @@ const products = ref([
     img: "https://m.media-amazon.com/images/I/61odom2xQeL._AC_UF894,1000_QL80_.jpg",
   },
 ]);
+
+function deleteProduct(productId) {
+  products.value = products.value.filter((product) => product.id !== productId);
+}
 </script>
 
 <template>
   <ul class="product-list">
     <li v-for="product in products" :key="product.id">
-      <ProductCard :product="product" />
+      <ProductCard :product="product" @delete="deleteProduct" />
     </li>
   </ul>
 </template>
