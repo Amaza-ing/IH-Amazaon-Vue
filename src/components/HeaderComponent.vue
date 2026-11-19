@@ -7,13 +7,13 @@
     <nav>
       <ul class="nav-list">
         <li>
-          <a href="#" class="link">Home</a>
+          <RouterLink to="/" class="link">Home</RouterLink>
         </li>
         <li>
-          <a href="#" class="link">Products</a>
+          <RouterLink to="/products" class="link">Products</RouterLink>
         </li>
         <li>
-          <a href="#" class="link">Contact</a>
+          <RouterLink to="/basics" class="link">Basics</RouterLink>
         </li>
       </ul>
     </nav>
