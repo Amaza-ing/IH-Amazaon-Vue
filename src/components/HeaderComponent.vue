@@ -3,7 +3,7 @@
 <template>
   <header class="header">
     <h1 class="title">Bienvenidos!</h1>
-  
+
     <nav>
       <ul class="nav-list">
         <li>
@@ -14,6 +14,9 @@
         </li>
         <li>
           <RouterLink to="/basics" class="link">Basics</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/users" class="link">Users</RouterLink>
         </li>
       </ul>
     </nav>
