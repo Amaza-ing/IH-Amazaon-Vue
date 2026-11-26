@@ -14,7 +14,9 @@ function deleteProduct() {
 
 <template>
   <article class="product-card">
-    <h3 class="product-name">{{ props.product.name }}</h3>
+    <RouterLink :to="`/products/${props.product.id}`">
+      <h3 class="product-name">{{ props.product.name }}</h3>
+    </RouterLink>
     <img
       :src="props.product.img"
       alt="Imagen del producto"

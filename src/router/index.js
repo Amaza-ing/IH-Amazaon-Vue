@@ -1,4 +1,5 @@
 import HomeView from "@/views/HomeView.vue";
+import ProductDetails from "@/views/ProductDetails.vue";
 import ProductView from "@/views/ProductView.vue";
 import UserView from "@/views/UserView.vue";
 import VueBasics from "@/views/VueBasics.vue";
@@ -16,6 +17,10 @@ const routes = [
   {
     path: "/products",
     component: ProductView,
+  },
+  {
+    path: "/products/:id",
+    component: ProductDetails,
   },
   {
     path: "/users",
